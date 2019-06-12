@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { translations } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
+import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './features/routing/routing.module';
         resources: translations
       }
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    AppMultiSiteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
