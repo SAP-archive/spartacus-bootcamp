@@ -1,1 +1,15 @@
-<a routerLink="/">Home</a> <H1>Static page</H1>
+<H1>Static page</H1>
+<p>Pages can be created in spartacus in a generic way. Spartacus let you work with the router in a generic way.</p>
+
+<h3>Standard router</h3>
+<p>
+  The standard angular router works as expected. You can use the routerLink to link to any pages, for example the
+  <a routerLink="/">home page</a>.
+</p>
+
+<h3>Semantic Links</h3>
+<p>
+  This section demonstrate semantic links in Spartacus, for example a link to the
+  <a [routerLink]="{ cxRoute: 'cart' } | cxUrl"> cart page</a>. Using the <i>cxUrl</i>, you can use a semantic link
+  which is configurable and controlled in Spartacus.
+</p>

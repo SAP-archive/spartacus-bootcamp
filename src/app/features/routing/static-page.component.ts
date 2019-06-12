@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppStaticPageComponent {
   title = 'spartacus-bootcamp';
+
+  // urlService.generateUrl({ cxRoute: 'product', params: { productCode: 1234 } });
 }
