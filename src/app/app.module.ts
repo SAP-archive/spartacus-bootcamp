@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { translations } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './features/routing/routing.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
