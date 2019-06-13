@@ -5,6 +5,8 @@ import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
+import {WishListStateModule} from './features/wish-list-state/wish-list-state.module';
+import {WishListUIModule} from './features/wish-list-ui/wish-list-ui.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,7 +25,9 @@ import { AppRoutingModule } from './features/routing/routing.module';
       }
     }),
     AppRoutingModule,
-    AppMultiSiteModule
+    AppMultiSiteModule,
+    WishListStateModule,
+    WishListUIModule
   ],
   providers: [],
   bootstrap: [AppComponent]
