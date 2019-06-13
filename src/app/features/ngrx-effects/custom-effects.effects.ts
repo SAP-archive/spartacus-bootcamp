@@ -2,7 +2,15 @@ import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
 import {Observable} from 'rxjs';
 import {map, tap} from 'rxjs/operators';
-import {ADD_ENTRY_SUCCESS, AddEntrySuccess, AddMessage, GlobalMessageType, LOAD_PRODUCT_SUCCESS, LoadProductSuccess} from '@spartacus/core';
+import {
+    ADD_ENTRY_SUCCESS,
+    AddEntrySuccess,
+    AddMessage,
+    GlobalMessageType,
+    LOAD_PRODUCT_SUCCESS,
+    LoadProductSuccess,
+    Product
+} from '@spartacus/core';
 
 
 @Injectable()
@@ -18,7 +26,7 @@ export class CustomEffectsEffects {
     addToCartNotify$: Observable<any> = this.actions$.pipe(
         ofType(ADD_ENTRY_SUCCESS),
         map((action: AddEntrySuccess) => action.payload.entry.product),
-        map(product => new AddMessage(
+        map((product: Product) => new AddMessage(
             {
                 text: {raw: product.name + ' added to cart'},
                 type: GlobalMessageType.MSG_TYPE_CONFIRMATION
