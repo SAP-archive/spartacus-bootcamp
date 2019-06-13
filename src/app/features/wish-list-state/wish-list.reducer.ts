@@ -5,7 +5,7 @@ import {WishListState} from './wish-list.state';
 
 
 export const initialState: WishListState = {
-  wishes: []
+  wishes: undefined
 };
 
 export function reducer(state = initialState, action: WishListActions): WishListState {

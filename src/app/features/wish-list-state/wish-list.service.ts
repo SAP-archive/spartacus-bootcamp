@@ -17,7 +17,7 @@ export class WishListService {
       select(getWishes),
       observeOn(queueScheduler),
       tap(wishes => {
-        if (!wishes.length) {
+        if (!wishes) {
           this.store.dispatch(new LoadWishLists());
         }
       })
