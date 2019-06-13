@@ -7,7 +7,6 @@ import {filter, map, take} from 'rxjs/operators';
 @Component({
   selector: 'app-wish-list-add-to-cart',
   templateUrl: './wish-list-add-to-cart.component.html',
-  styleUrls: ['./wish-list-add-to-cart.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WishListAddToCartComponent {
