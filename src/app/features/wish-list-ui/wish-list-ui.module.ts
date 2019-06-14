@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { WishListAddToCartComponent } from './wish-list-add-to-cart/wish-list-add-to-cart.component';
 import {ConfigModule, UrlModule} from '@spartacus/core';
 import {AddToCartModule, IconModule} from '@spartacus/storefront';
-import { WishListComponent } from './wish-list/wish-list.component';
+import { WishListWidgetComponent } from './wish-list/wish-list-widget.component';
 import {RouterModule} from '@angular/router';
 
 @NgModule({
-  declarations: [WishListAddToCartComponent, WishListComponent],
+  declarations: [WishListAddToCartComponent, WishListWidgetComponent],
   imports: [
     CommonModule,
     AddToCartModule,
@@ -22,6 +22,7 @@ import {RouterModule} from '@angular/router';
     }),
     RouterModule
   ],
+  exports: [WishListWidgetComponent],
   entryComponents: [WishListAddToCartComponent]
 })
 export class WishListUIModule { }

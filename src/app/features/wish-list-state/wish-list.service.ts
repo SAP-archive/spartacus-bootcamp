@@ -4,7 +4,7 @@ import {getWishes} from './wish-list.selectors';
 import {StateWithWishList} from './wish-list.state';
 import {Observable, queueScheduler} from 'rxjs';
 import {AddWish, LoadWishLists, RemoveWish} from './wish-list.actions';
-import {observeOn, tap} from 'rxjs/operators';
+import {filter, observeOn, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,8 @@ export class WishListService {
         if (!wishes) {
           this.store.dispatch(new LoadWishLists());
         }
-      })
+      }),
+      filter(Boolean)
     );
 
   add(productCode: string) {
