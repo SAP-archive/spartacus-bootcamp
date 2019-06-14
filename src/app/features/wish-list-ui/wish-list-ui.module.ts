@@ -5,6 +5,7 @@ import {ConfigModule, UrlModule} from '@spartacus/core';
 import {AddToCartModule, IconModule} from '@spartacus/storefront';
 import { WishListWidgetComponent } from './wish-list/wish-list-widget.component';
 import {RouterModule} from '@angular/router';
+import {WishListStateModule} from '../wish-list-state/wish-list-state.module';
 
 @NgModule({
   declarations: [WishListAddToCartComponent, WishListWidgetComponent],
@@ -13,6 +14,7 @@ import {RouterModule} from '@angular/router';
     AddToCartModule,
     UrlModule,
     IconModule,
+    WishListStateModule,
     ConfigModule.withConfig({
       cmsComponents: {
         ProductAddToCartComponent: {
