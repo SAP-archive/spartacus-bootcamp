@@ -46,7 +46,7 @@ export class CustomContentPageMetaResolver extends ContentPageMetaResolver
     const firstSlot = Object.keys(page.slots).find(uid => {
       return (
         (page.slots[uid] as ContentSlotData).components &&
-        (page.slots[uid] as ContentSlotData).components.find(c => {
+        !!(page.slots[uid] as ContentSlotData).components.find(c => {
           return c.typeCode === 'CMSParagraphComponent';
         })
       );
