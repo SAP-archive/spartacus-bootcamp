@@ -4,9 +4,11 @@ import { translations } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
-import { NgrxEffectsModule } from './features/ngrx-effects/ngrx-effects.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
+import { NgrxEffectsModule } from './features/state-management/ngrx-effects/ngrx-effects.module';
+import { WishListStateModule } from './features/state-management/wish-list-state/wish-list-state.module';
+import { WishListUIModule } from './features/state-management/wish-list-ui/wish-list-ui.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -28,6 +30,8 @@ import { AppSeoModule } from './features/seo/seo.module';
     AppRoutingModule,
     AppMultiSiteModule,
     AppSeoModule,
+    WishListStateModule,
+    WishListUIModule,
     NgrxEffectsModule,
   ],
   providers: [],

@@ -1,0 +1,28 @@
+<div *ngIf="visible$ | async" class="wish-list">
+
+  <h3>Wish List</h3>
+
+  <ng-container *ngIf="products$ | async as products">
+    <ul *ngIf="products.length; else emptyList">
+      <li *ngFor="let product of products">
+        <cx-icon
+                [type]="iconType.RESET"
+                (click)="remove(product.code)"
+        ></cx-icon>
+        <a [routerLink]="{ cxRoute: 'product', params: product } | cxUrl">{{product.name}}</a>
+      </li>
+    </ul>
+  </ng-container>
+
+  <button
+    class="btn btn-block btn-secondary"
+    type="button"
+    (click)="close()"
+  >Close</button>
+
+  <ng-template #emptyList>
+    <h5>Your wish list is empty :(</h5>
+  </ng-template>
+
+</div>
+
