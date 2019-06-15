@@ -10,7 +10,7 @@ import { AppSeoModule } from './features/seo/seo.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'spartacus-app' }),
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
@@ -24,6 +24,9 @@ import { AppSeoModule } from './features/seo/seo.module';
       i18n: {
         resources: translations,
       },
+      pwa: {
+        enabled: false
+      }
     }),
     AppRoutingModule,
     AppMultiSiteModule,
