@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { translations } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
+import { AppDataBindingModule } from './features/data-binding/data-binding.module';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
@@ -29,6 +30,7 @@ import { AppStateModule } from './features/state/state.module';
     AppMultiSiteModule,
     AppSeoModule,
     AppStateModule,
+    AppDataBindingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
