@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
-import { NgrxEffectsModule } from './features/state-management/ngrx-effects/ngrx-effects.module';
-import { WishListStateModule } from './features/state-management/wish-list-state/wish-list-state.module';
-import { WishListUIModule } from './features/state-management/wish-list-ui/wish-list-ui.module';
+import { AppStateModule } from './features/state/state.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -30,9 +28,7 @@ import { WishListUIModule } from './features/state-management/wish-list-ui/wish-
     AppRoutingModule,
     AppMultiSiteModule,
     AppSeoModule,
-    WishListStateModule,
-    WishListUIModule,
-    NgrxEffectsModule,
+    AppStateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

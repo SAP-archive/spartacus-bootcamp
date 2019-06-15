@@ -1,4 +1,4 @@
-import {Action} from '@ngrx/store';
+import { Action } from '@ngrx/store';
 
 export enum WishListActionTypes {
   LoadWishLists = '[WishList] Load WishLists',
@@ -26,4 +26,8 @@ export class RemoveWish implements Action {
   constructor(public payload: string) {}
 }
 
-export type WishListActions = LoadWishLists | LoadWishListsSuccess | AddWish | RemoveWish;
+export type WishListActions =
+  | LoadWishLists
+  | LoadWishListsSuccess
+  | AddWish
+  | RemoveWish;

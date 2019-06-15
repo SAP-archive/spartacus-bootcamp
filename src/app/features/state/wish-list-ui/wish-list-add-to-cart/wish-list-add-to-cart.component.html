@@ -1,21 +1,13 @@
 <cx-add-to-cart></cx-add-to-cart>
 
 <ng-container *ngIf="isInWishList$ | async; else notInWishList">
-  <button
-    class="btn btn-block"
-    type="button"
-    (click)="open()"
-  >
+  <button class="btn btn-block" type="button" (click)="open()">
     On wish list!
   </button>
 </ng-container>
 
 <ng-template #notInWishList>
-  <button
-    class="btn btn-block"
-    type="button"
-    (click)="addToWishList()"
-  >
+  <button class="btn btn-block" type="button" (click)="addToWishList()">
     Add to wish list
   </button>
 </ng-template>

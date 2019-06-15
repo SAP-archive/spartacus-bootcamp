@@ -1,15 +1,17 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect, ofType} from '@ngrx/effects';
-
-import {map, tap} from 'rxjs/operators';
-import {LoadWishListsSuccess, WishListActions, WishListActionTypes} from './wish-list.actions';
-import {WindowRef} from '@spartacus/core';
+import { Injectable } from '@angular/core';
+import { Actions, Effect, ofType } from '@ngrx/effects';
+import { WindowRef } from '@spartacus/core';
+import { map, tap } from 'rxjs/operators';
+import {
+  LoadWishListsSuccess,
+  WishListActions,
+  WishListActionTypes,
+} from './wish-list.actions';
 
 const WISH_LIST_KEY = 'wish-list-data';
 
 @Injectable()
 export class WishListEffects {
-
   @Effect()
   loadWishLists$ = this.actions$.pipe(
     ofType(WishListActionTypes.LoadWishLists),
@@ -19,22 +21,20 @@ export class WishListEffects {
     })
   );
 
-
-  @Effect({ dispatch: false})
+  @Effect({ dispatch: false })
   addWish$ = this.actions$.pipe(
-      ofType(WishListActionTypes.AddWish),
-      tap(action => {
-        this.addToWishList(action.payload);
-      })
+    ofType(WishListActionTypes.AddWish),
+    tap(action => {
+      this.addToWishList(action.payload);
+    })
   );
 
-
-  @Effect({ dispatch: false})
+  @Effect({ dispatch: false })
   removeWish$ = this.actions$.pipe(
-      ofType(WishListActionTypes.RemoveWish),
-      tap(action => {
-        this.removeFromWishList(action.payload);
-      })
+    ofType(WishListActionTypes.RemoveWish),
+    tap(action => {
+      this.removeFromWishList(action.payload);
+    })
   );
 
   /**
@@ -73,6 +73,8 @@ export class WishListEffects {
     this.setWishList(this.getWishList().filter(wish => wish !== wishToRemove));
   }
 
-  constructor(private actions$: Actions<WishListActions>, private winRef: WindowRef) {}
-
+  constructor(
+    private actions$: Actions<WishListActions>,
+    private winRef: WindowRef
+  ) {}
 }

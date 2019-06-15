@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WishListWidgetService {
-
   wishListVisible$ = new BehaviorSubject(false);
 
   open() {
@@ -15,5 +14,4 @@ export class WishListWidgetService {
   close() {
     this.wishListVisible$.next(false);
   }
-
 }

@@ -1,16 +1,15 @@
-
 import { WishListActions, WishListActionTypes } from './wish-list.actions';
-import {WishListState} from './wish-list.state';
-
-
+import { WishListState } from './wish-list.state';
 
 export const initialState: WishListState = {
-  wishes: undefined
+  wishes: undefined,
 };
 
-export function reducer(state = initialState, action: WishListActions): WishListState {
+export function reducer(
+  state = initialState,
+  action: WishListActions
+): WishListState {
   switch (action.type) {
-
     case WishListActionTypes.LoadWishListsSuccess:
       return { wishes: action.payload };
 
@@ -18,11 +17,11 @@ export function reducer(state = initialState, action: WishListActions): WishList
       if (state.wishes.find(wish => wish === action.payload)) {
         return state;
       }
-      return { wishes: [...state.wishes, action.payload]};
+      return { wishes: [...state.wishes, action.payload] };
     }
 
     case WishListActionTypes.RemoveWish:
-      return { wishes: state.wishes.filter(wish => wish !== action.payload ) };
+      return { wishes: state.wishes.filter(wish => wish !== action.payload) };
 
     default:
       return state;
