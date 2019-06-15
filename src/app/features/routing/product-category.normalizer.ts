@@ -5,11 +5,8 @@ import { Converter, Occ, Product } from '@spartacus/core';
 export class ProductCategoryNormalizer
   implements Converter<Occ.Product, Product> {
   convert(source: Occ.Product, target?: any): Product {
-    if (target === undefined) {
-      target = { ...(source as any) };
-    }
     if (source.categories && source.categories.length) {
-      target.category = source.categories[0].name; //
+      target.category = source.categories[0].name;
     }
 
     return target;

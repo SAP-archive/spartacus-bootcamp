@@ -4,9 +4,9 @@ import { translations } from '@spartacus/assets';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
-import { NgrxEffectsModule } from './features/ngrx-effects/ngrx-effects.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
+import { AppStateModule } from './features/state/state.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -31,7 +31,8 @@ import { AppSeoModule } from './features/seo/seo.module';
     AppRoutingModule,
     AppMultiSiteModule,
     AppSeoModule,
-    NgrxEffectsModule,
+    AppStateModule,
+    // AppDataBindingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
