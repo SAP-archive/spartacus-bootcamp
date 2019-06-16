@@ -15,6 +15,7 @@ export function reducer(
 
     case WishListActionTypes.AddWish: {
       if (state.wishes.find(wish => wish === action.payload)) {
+        // don't modify the sate if wish is already in list
         return state;
       }
       return { wishes: [...state.wishes, action.payload] };

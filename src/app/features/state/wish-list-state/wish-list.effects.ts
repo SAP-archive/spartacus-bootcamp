@@ -16,8 +16,8 @@ export class WishListEffects {
   loadWishLists$ = this.actions$.pipe(
     ofType(WishListActionTypes.LoadWishLists),
     map(x => {
-      const wishlist = this.getWishList();
-      return new LoadWishListsSuccess(wishlist);
+      const wishList = this.getWishList();
+      return new LoadWishListsSuccess(wishList);
     })
   );
 
