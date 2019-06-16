@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/static-cms.module';
 import { AppConfigModule } from './features/config/config.module';
 import { Theme, ThemeConfig } from './features/config/theme.config';
+import { AppI18nModule } from './features/i18n/i18n.module';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
 import { AppStateModule } from './features/state/state.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -41,6 +43,8 @@ import { AppStateModule } from './features/state/state.module';
     // demonstrate custom Config
     AppConfigModule,
     ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
+
+    AppI18nModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
