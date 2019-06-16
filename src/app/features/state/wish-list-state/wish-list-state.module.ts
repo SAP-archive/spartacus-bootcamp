@@ -9,6 +9,8 @@ import { WISH_LIST_FEATURE } from './wish-list.state';
 @NgModule({
   imports: [
     CommonModule,
+    // Use StoreModule.forFeature() abd EffectsModule.forFeature()
+    // to register your custom feature state and effects
     StoreModule.forFeature(WISH_LIST_FEATURE, reducer),
     EffectsModule.forFeature([WishListEffects]),
   ],
