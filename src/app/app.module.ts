@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { translations } from '@spartacus/assets';
+import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
-import { StaticCmsModule } from './features/cms/static/static-cms.module';
+import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/static-cms.module';
+import { AppConfigModule } from './features/config/config.module';
+import { Theme, ThemeConfig } from './features/config/theme.config';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
@@ -31,7 +34,13 @@ import { AppStateModule } from './features/state/state.module';
     AppSeoModule,
     AppStateModule,
     // AppDataBindingModule,
-    StaticCmsModule,
+
+    // Demonstrate static CMS config
+    AppStaticCmsModule,
+
+    // demonstrate custom Config
+    AppConfigModule,
+    ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
   ],
   providers: [],
   bootstrap: [AppComponent],
