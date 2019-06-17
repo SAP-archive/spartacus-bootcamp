@@ -6,7 +6,7 @@ import { ConfigModule } from '@spartacus/core';
     ConfigModule.withConfig({
       i18n: {
         backend: {
-          loadPath: 'assets/i18n-assets//.json',
+          loadPath: 'assets/i18n-assets/{{lng}}/{{ns}}.json',
         },
         // chunks: {
         //   common: ['searchBox', 'sorting'],
