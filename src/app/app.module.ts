@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { translations } from '@spartacus/assets';
-import { ConfigModule } from '@spartacus/core';
+import { ConfigModule, I18nModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
 import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/static-cms.module';
@@ -12,7 +12,6 @@ import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
 import { AppStateModule } from './features/state/state.module';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -26,9 +25,6 @@ import { AppStateModule } from './features/state/state.module';
       },
       site: {
         baseSite: 'electronics-spa',
-      },
-      i18n: {
-        resources: translations,
       },
     }),
     AppRoutingModule,
@@ -44,6 +40,13 @@ import { AppStateModule } from './features/state/state.module';
     AppConfigModule,
     ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
 
+    // demonstrate i18n
+    ConfigModule.withConfig({
+      i18n: {
+        resources: translations,
+      },
+    }),
+    I18nModule,
     AppI18nModule,
   ],
   providers: [],
