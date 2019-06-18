@@ -16,9 +16,9 @@ import { filter, map, switchMap } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None,
 })
 export class OutletComponent {
-  private product$: Observable<Product> = this.product
-    .getProduct()
-    .pipe(filter(Boolean));
+  private product$: Observable<
+    Product
+  > = this.currentProductService.getProduct().pipe(filter(Boolean));
 
   quantity$: Observable<number> = this.product$
     .pipe(
@@ -27,7 +27,7 @@ export class OutletComponent {
     )
     .pipe(map((cart: OrderEntry) => cart.quantity));
 
-  hasBrand(brand): Observable<boolean> {
+  hasBrand(brand: string): Observable<boolean> {
     return this.product$.pipe(
       map(
         p =>
@@ -37,7 +37,7 @@ export class OutletComponent {
   }
 
   constructor(
-    private product: CurrentProductService,
+    private currentProductService: CurrentProductService,
     private cartService: CartService
   ) {}
 }

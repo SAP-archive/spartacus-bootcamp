@@ -9,8 +9,8 @@ const routes: Routes = [
   {
     path: 'sale',
     component: AppStaticSalePageComponent,
-    data: { pageLabel: '/faq' },
-    canActivate: [CmsPageGuard],
+    // data: { pageLabel: '/faq' },
+    // canActivate: [CmsPageGuard],
   },
   {
     path: 'my/static/page',
