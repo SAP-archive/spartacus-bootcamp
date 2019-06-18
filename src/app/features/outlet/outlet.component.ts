@@ -15,7 +15,7 @@ import { filter, map, switchMap } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
-export class OuletComponent {
+export class OutletComponent {
   private product$: Observable<Product> = this.product
     .getProduct()
     .pipe(filter(Boolean));

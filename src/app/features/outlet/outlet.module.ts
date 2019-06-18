@@ -5,11 +5,11 @@ import {
   OutletRefModule,
   PageComponentModule,
 } from '@spartacus/storefront';
-import { OuletComponent } from './outlet.component';
+import { OutletComponent } from './outlet.component';
 
 @NgModule({
   imports: [CommonModule, OutletRefModule, PageComponentModule, IconModule],
-  declarations: [OuletComponent],
-  exports: [OuletComponent],
+  declarations: [OutletComponent],
+  exports: [OutletComponent],
 })
 export class AppOutletModule {}
