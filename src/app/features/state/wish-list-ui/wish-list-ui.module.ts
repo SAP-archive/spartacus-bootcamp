@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WishListAddToCartComponent } from './wish-list-add-to-cart/wish-list-add-to-cart.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ConfigModule, UrlModule } from '@spartacus/core';
 import { AddToCartModule, IconModule } from '@spartacus/storefront';
-import { WishListWidgetComponent } from './wish-list/wish-list-widget.component';
-import { RouterModule } from '@angular/router';
 import { WishListStateModule } from '../wish-list-state/wish-list-state.module';
+import { WishListAddToCartComponent } from './wish-list-add-to-cart/wish-list-add-to-cart.component';
+import { WishListWidgetComponent } from './wish-list/wish-list-widget.component';
 
 @NgModule({
   declarations: [WishListAddToCartComponent, WishListWidgetComponent],
