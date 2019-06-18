@@ -6,6 +6,15 @@ import { switchMap } from 'rxjs/operators';
 import { WishListService } from '../../wish-list-state/wish-list.service';
 import { WishListWidgetService } from './wish-list-widget.service';
 
+/**
+ * Simple wish list widget component.
+ *
+ * 1. Display lists of products added to wish list,
+ *    with proper product names and product links.
+ * 2. Allows for removing product from wish list.
+ * 3. Contains the button to close widget.
+ */
+
 @Component({
   selector: 'app-wish-list-widget',
   templateUrl: './wish-list-widget.component.html',
@@ -15,8 +24,14 @@ import { WishListWidgetService } from './wish-list-widget.service';
 export class WishListWidgetComponent {
   iconType = ICON_TYPE;
 
+  /**
+   * Grab observable with visibility state from WishListWidgetService
+   */
   visible$ = this.wishListWidgetService.wishListVisible$;
 
+  /**
+   * Observable with product's data based on product codes in wish list
+   */
   products$: Observable<Product[]> = this.wishListService.list$.pipe(
     switchMap(productCodes =>
       productCodes.length
@@ -31,10 +46,17 @@ export class WishListWidgetComponent {
     private wishListWidgetService: WishListWidgetService
   ) {}
 
+  /**
+   * Remove product from wish list by code
+   * @param code
+   */
   remove(code: string) {
     this.wishListService.remove(code);
   }
 
+  /**
+   * Close wish list widget
+   */
   close() {
     this.wishListWidgetService.close();
   }

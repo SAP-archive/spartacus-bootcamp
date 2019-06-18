@@ -31,9 +31,7 @@ export class CustomContentPageMetaResolver extends ContentPageMetaResolver
 
   resolveDescription(): Observable<string> {
     return this.cms.getCurrentPage().pipe(
-      map(page => {
-        return this.getFirstContentComponent(page);
-      }),
+      map(page => this.getFirstContentComponent(page)),
       switchMap(compUid => this.cms.getComponentData(compUid)),
       map(
         (paragraphComponent: CmsParagraphComponent) =>
@@ -42,7 +40,10 @@ export class CustomContentPageMetaResolver extends ContentPageMetaResolver
     );
   }
 
-  private getFirstContentComponent(page: Page) {
+  private getFirstContentComponent(page: Page): string {
+    if (!page) {
+      return null;
+    }
     const firstSlot = Object.keys(page.slots).find(uid => {
       return (
         (page.slots[uid] as ContentSlotData).components &&

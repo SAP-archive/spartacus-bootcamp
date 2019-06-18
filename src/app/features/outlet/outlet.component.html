@@ -1,0 +1,34 @@
+<!-- component based outlet -->
+<ng-template cxOutletRef="ProductAddToCartComponent">
+  <div class="add-to-cart">
+    <ng-container
+      [cxComponentWrapper]="{
+        typeCode: 'ProductAddToCartComponent',
+        flexType: 'ProductAddToCartComponent'
+      }"
+    ></ng-container>
+    <div class="summary" *ngIf="quantity$ | async as quantity">
+      <cx-icon type="CART"></cx-icon>
+      <div class="count">{{ quantity }}</div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- page template based output -->
+<ng-template cxOutletRef="ProductDetailsPageTemplate" cxOutletPos="before">
+  <div *ngIf="hasBrand('canon') | async" class="before-pdp">
+    Campaign UI for Canon
+  </div>
+</ng-template>
+
+<!-- page section based outlet -->
+
+<ng-template cxOutletRef="footer" cxOutletPos="before" let-model>
+  custom footer
+</ng-template>
+
+<!-- slot position based output -->
+<ng-template cxOutletRef="Section1" cxOutletPos="before" let-model>
+  "Section1" position
+  <pre>{{ model.components$ | async | json }}</pre>
+</ng-template>

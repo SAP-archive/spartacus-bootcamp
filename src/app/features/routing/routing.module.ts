@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UrlModule } from '@spartacus/core';
-import { OutletRefModule } from '@spartacus/storefront';
+import { CmsPageGuard, OutletRefModule } from '@spartacus/storefront';
 import { CustomProductRoutesModule } from './product-routes.module';
 import { AppStaticPageComponent as AppStaticSalePageComponent } from './static-page.component';
 
@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'sale',
     component: AppStaticSalePageComponent,
+    // data: { pageLabel: '/faq' },
+    // canActivate: [CmsPageGuard],
+  },
+  {
+    path: 'my/static/page',
+    component: AppStaticSalePageComponent,
+    data: { pageLabel: '/faq' },
+    canActivate: [CmsPageGuard],
   },
 ];
 

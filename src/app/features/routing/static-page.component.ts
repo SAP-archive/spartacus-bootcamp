@@ -2,10 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-static-page',
-  templateUrl: './static-page.component.html'
+  templateUrl: './static-page.component.html',
 })
-export class AppStaticPageComponent {
-  title = 'spartacus-bootcamp';
-
-  // urlService.generateUrl({ cxRoute: 'product', params: { productCode: 1234 } });
-}
+export class AppStaticPageComponent {}
