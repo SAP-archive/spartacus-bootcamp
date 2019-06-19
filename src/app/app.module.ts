@@ -16,7 +16,7 @@ import { AppStateModule } from './features/state/state.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'spartacus-app' }),
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
@@ -27,6 +27,9 @@ import { AppStateModule } from './features/state/state.module';
       site: {
         baseSite: 'electronics-spa',
       },
+      pwa: {
+        enabled: false
+      }
     }),
     AppRoutingModule,
     AppMultiSiteModule,
