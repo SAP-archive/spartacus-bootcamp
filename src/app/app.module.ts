@@ -5,10 +5,10 @@ import { ConfigModule, I18nModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
 import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/static-cms.module';
+import { AppComponentModule } from './features/components/component.module';
 import { AppConfigModule } from './features/config/config.module';
 import { Theme, ThemeConfig } from './features/config/theme.config';
 import { AppI18nModule } from './features/i18n/i18n.module';
-import { AppLayoutConfigModule } from './features/layout/layout.module';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
@@ -54,7 +54,9 @@ import { AppStateModule } from './features/state/state.module';
     // AppOutletModule,
 
     // demonstrates layout configuration
-    AppLayoutConfigModule,
+    // AppLayoutConfigModule,
+
+    AppComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
