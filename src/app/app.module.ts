@@ -8,8 +8,8 @@ import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/sta
 import { AppConfigModule } from './features/config/config.module';
 import { Theme, ThemeConfig } from './features/config/theme.config';
 import { AppI18nModule } from './features/i18n/i18n.module';
+import { AppLayoutConfigModule } from './features/layout/layout.module';
 import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
-import { AppOutletModule } from './features/outlet/outlet.module';
 import { AppRoutingModule } from './features/routing/routing.module';
 import { AppSeoModule } from './features/seo/seo.module';
 import { AppStateModule } from './features/state/state.module';
@@ -51,7 +51,10 @@ import { AppStateModule } from './features/state/state.module';
     AppI18nModule,
 
     // demonstrate outlets
-    AppOutletModule,
+    // AppOutletModule,
+
+    // demonstrates layout configuration
+    AppLayoutConfigModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

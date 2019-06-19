@@ -4,7 +4,10 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { CartService, OrderEntry, Product } from '@spartacus/core';
-import { CurrentProductService } from '@spartacus/storefront';
+import {
+  CurrentProductService,
+  ProductDetailOutlets,
+} from '@spartacus/storefront';
 import { Observable } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
 
@@ -16,6 +19,8 @@ import { filter, map, switchMap } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None,
 })
 export class OutletComponent {
+  outlets = ProductDetailOutlets;
+
   private product$: Observable<
     Product
   > = this.currentProductService.getProduct().pipe(filter(Boolean));

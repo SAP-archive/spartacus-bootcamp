@@ -1,3 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/features/styling/custom-styles.scss';
 @import '~@spartacus/styles/index';
+
+:root {
+  --cx-g-color-primary: blue;
+  --cx-g-color-secondary: green;
+}
+
+@import './app/features/layout/layout.scss';

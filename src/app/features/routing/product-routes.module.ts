@@ -5,7 +5,10 @@ import {
   PRODUCT_NORMALIZER,
   RouteConfig,
 } from '@spartacus/core';
-import { ProductCategoryNormalizer } from './product-category.normalizer';
+import {
+  ProductCategoryNormalizer,
+  ProductPrettyNameNormalizer,
+} from './product-category.normalizer';
 
 @NgModule({
   imports: [
@@ -15,9 +18,9 @@ import { ProductCategoryNormalizer } from './product-category.normalizer';
         routes: {
           product: {
             paths: [
-              'product/:manufacturer/:category/:productCode/:name',
-              'product/:manufacturer/:productCode/:name',
-              'product/:productCode',
+              'product/:manufacturer/:firstCategoryName/:productCode/:prettyName',
+              'product/:manufacturer/:productCode/:prettyName',
+              'product/:productCode/:name',
             ],
             paramsMapping: {
               productCode: 'code',
@@ -42,6 +45,11 @@ import { ProductCategoryNormalizer } from './product-category.normalizer';
   ],
   providers: [
     // normalize the product data to get the first product category in the Product model
+    {
+      provide: PRODUCT_NORMALIZER,
+      useClass: ProductPrettyNameNormalizer,
+      multi: true,
+    },
     {
       provide: PRODUCT_NORMALIZER,
       useClass: ProductCategoryNormalizer,

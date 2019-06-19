@@ -6,12 +6,12 @@ import { CustomProductRoutesModule } from './product-routes.module';
 import { AppStaticPageComponent as AppStaticSalePageComponent } from './static-page.component';
 
 const routes: Routes = [
+  // standard angular route
   {
     path: 'sale',
     component: AppStaticSalePageComponent,
-    // data: { pageLabel: '/faq' },
-    // canActivate: [CmsPageGuard],
   },
+  // standard angular route connected to CMS data
   {
     path: 'my/static/page',
     component: AppStaticSalePageComponent,

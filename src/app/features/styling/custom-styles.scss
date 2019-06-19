@@ -1,8 +1,4 @@
 /* customize global theme */
-:root {
-  --cx-g-color-primary: blue;
-  --cx-g-color-secondary: green;
-}
 
 /* Opt-out of certain component styles */
 $skipComponentStyles: (cx-mini-cart);
