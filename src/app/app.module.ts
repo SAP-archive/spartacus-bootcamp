@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { translations } from '@spartacus/assets';
-import { ConfigModule, I18nModule } from '@spartacus/core';
+import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
-import { StaticCmsModule as AppStaticCmsModule } from './features/cms/static/static-cms.module';
-import { AppComponentModule } from './features/components/component.module';
-import { AppConfigModule } from './features/config/config.module';
+import { BootcampStaticCmsModule } from './features/cms/static/static-cms.module';
+import { BootcampComponentModule } from './features/components/component.module';
+import { BootcampConfigModule } from './features/config/config.module';
 import { Theme, ThemeConfig } from './features/config/theme.config';
-import { AppI18nModule } from './features/i18n/i18n.module';
-import { AppMultiSiteModule } from './features/multi-site/multi-site.module';
-import { AppRoutingModule } from './features/routing/routing.module';
-import { AppSeoModule } from './features/seo/seo.module';
-import { AppStateModule } from './features/state/state.module';
+import { BootcampI18nModule } from './features/i18n/i18n.module';
+import { BootcampMultiSiteModule } from './features/multi-site/multi-site.module';
+import { BootcampOutletModule } from './features/outlet/outlet.module';
+import { BootcampRoutingModule } from './features/routing/routing.module';
+import { BootcampSeoModule } from './features/seo/seo.module';
+import { BootcampStateModule } from './features/state/state.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -28,38 +28,37 @@ import { AppStateModule } from './features/state/state.module';
         baseSite: 'electronics-spa',
       },
       pwa: {
-        enabled: false
-      }
+        enabled: false,
+      },
     }),
-    AppRoutingModule,
-    AppMultiSiteModule,
-    AppSeoModule,
-    AppStateModule,
-    // AppDataBindingModule,
+    BootcampRoutingModule,
+    BootcampMultiSiteModule,
+    BootcampSeoModule,
+    BootcampStateModule,
+    // BootcampDataBindingModule,
 
     // Demonstrate static CMS config
-    AppStaticCmsModule,
+    BootcampStaticCmsModule,
 
     // demonstrate custom Config
-    AppConfigModule,
+    BootcampConfigModule,
     ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
 
     // demonstrate i18n
-    ConfigModule.withConfig({
-      i18n: {
-        resources: translations,
-      },
-    }),
-    I18nModule,
-    AppI18nModule,
+    // ConfigModule.withConfig({
+    //   i18n: {
+    //     resources: translations,
+    //   },
+    // }),
+    BootcampI18nModule,
 
     // demonstrate outlets
-    // AppOutletModule,
+    BootcampOutletModule,
 
     // demonstrates layout configuration
-    // AppLayoutConfigModule,
+    // BootcampLayoutConfigModule,
 
-    AppComponentModule,
+    BootcampComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

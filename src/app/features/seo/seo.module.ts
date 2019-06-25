@@ -18,4 +18,4 @@ import { LoginPageMetaResolver } from './login-meta.resolver';
     },
   ],
 })
-export class AppSeoModule {}
+export class BootcampSeoModule {}

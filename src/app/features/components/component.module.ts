@@ -4,4 +4,4 @@ import { CustomBannerModule } from './banner/banner.module';
 @NgModule({
   imports: [CustomBannerModule],
 })
-export class AppComponentModule {}
+export class BootcampComponentModule {}

@@ -16,4 +16,4 @@ import { BestbuyProductNormalizer } from './product.converter';
     },
   ],
 })
-export class AppDataBindingModule {}
+export class BootcampDataBindingModule {}

@@ -6,4 +6,4 @@ import { WishListUIModule } from './wish-list-ui/wish-list-ui.module';
   imports: [NgrxEffectsModule, WishListUIModule],
   exports: [WishListUIModule],
 })
-export class AppStateModule {}
+export class BootcampStateModule {}

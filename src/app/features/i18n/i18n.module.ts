@@ -3,6 +3,7 @@ import {
   ConfigModule,
   GlobalMessageService,
   GlobalMessageType,
+  I18nModule,
   TranslationService,
 } from '@spartacus/core';
 import { filter } from 'rxjs/operators';
@@ -29,6 +30,7 @@ export function i18nMessageFactory(
 
 @NgModule({
   imports: [
+    I18nModule,
     ConfigModule.withConfig({
       i18n: {
         backend: {
@@ -50,4 +52,4 @@ export function i18nMessageFactory(
     },
   ],
 })
-export class AppI18nModule {}
+export class BootcampI18nModule {}

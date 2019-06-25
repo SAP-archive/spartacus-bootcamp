@@ -5,4 +5,4 @@ import { staticCmsonfig } from './static-cms.config';
 @NgModule({
   imports: [ConfigModule.withConfig(staticCmsonfig as CmsStructureConfig)],
 })
-export class StaticCmsModule {}
+export class BootcampStaticCmsModule {}

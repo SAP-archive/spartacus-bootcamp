@@ -12,4 +12,4 @@ import { OutletComponent } from './outlet.component';
   declarations: [OutletComponent],
   exports: [OutletComponent],
 })
-export class AppOutletModule {}
+export class BootcampOutletModule {}

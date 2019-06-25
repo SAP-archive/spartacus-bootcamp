@@ -37,4 +37,4 @@ const routes: Routes = [
   declarations: [AppStaticSalePageComponent],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class BootcampRoutingModule {}

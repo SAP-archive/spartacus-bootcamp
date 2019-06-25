@@ -25,4 +25,4 @@ export function initializeApp1(config: ThemeConfig) {
   ],
   imports: [ConfigModule.withConfig(defaultThemeConfig)],
 })
-export class AppConfigModule {}
+export class BootcampConfigModule {}

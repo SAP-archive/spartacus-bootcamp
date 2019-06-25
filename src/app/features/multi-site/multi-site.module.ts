@@ -10,13 +10,13 @@ import { ConfigModule } from '@spartacus/core';
           BASE_SITE: {
             values: ['electronics-spa', 'apparel-uk'],
             defaultValue: 'electronics-spa',
-            persistence: 'route'
-          }
-        }
-      }
-    })
+            persistence: 'route',
+          },
+        },
+      },
+    }),
   ],
   declarations: [],
-  exports: []
+  exports: [],
 })
-export class AppMultiSiteModule {}
+export class BootcampMultiSiteModule {}

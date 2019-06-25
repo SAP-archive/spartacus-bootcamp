@@ -19,4 +19,4 @@ import { LayoutConfig } from '@spartacus/storefront';
     } as LayoutConfig),
   ],
 })
-export class AppLayoutConfigModule {}
+export class BootcampLayoutConfigModule {}
