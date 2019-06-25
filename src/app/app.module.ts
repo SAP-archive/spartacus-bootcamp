@@ -40,8 +40,8 @@ import { BootcampStateModule } from './features/state/state.module';
     // Demonstrate static CMS config
     BootcampStaticCmsModule,
 
-    // demonstrate custom Config
     BootcampConfigModule,
+    // Provide a custom them to the `ThemeConfig`.
     ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
 
     // demonstrate i18n
