@@ -19,6 +19,7 @@ export function demoThemeConfigFactory(config: ThemeConfig) {
  * at application level.
  */
 @NgModule({
+  imports: [ConfigModule.withConfig(defaultThemeConfig)],
   providers: [
     // inject a custom config object
     {
@@ -29,10 +30,9 @@ export function demoThemeConfigFactory(config: ThemeConfig) {
     {
       provide: APP_INITIALIZER,
       useFactory: demoThemeConfigFactory,
-      deps: [ThemeConfig],
+      deps: [Config],
       multi: true,
     },
   ],
-  imports: [ConfigModule.withConfig(defaultThemeConfig)],
 })
 export class BootcampConfigModule {}

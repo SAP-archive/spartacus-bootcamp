@@ -44,6 +44,9 @@ import { BootcampStateModule } from './features/state/state.module';
     // Provide a custom them to the `ThemeConfig`.
     ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
 
+    // Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html
+    BootcampOutletModule,
+
     // demonstrate i18n
     // ConfigModule.withConfig({
     //   i18n: {
@@ -51,9 +54,6 @@ import { BootcampStateModule } from './features/state/state.module';
     //   },
     // }),
     BootcampI18nModule,
-
-    // demonstrate outlets
-    BootcampOutletModule,
 
     // demonstrates layout configuration
     // BootcampLayoutConfigModule,
