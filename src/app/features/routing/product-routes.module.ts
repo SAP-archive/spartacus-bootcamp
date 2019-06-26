@@ -14,6 +14,10 @@ import {
   imports: [
     ConfigModule.withConfig({
       // configure product routes
+
+      paramsMapping: {
+        productCode: 'code',
+      },
       routing: {
         routes: {
           product: {
@@ -22,9 +26,6 @@ import {
               'product/:manufacturer/:productCode/:prettyName',
               'product/:productCode/:name',
             ],
-            paramsMapping: {
-              productCode: 'code',
-            },
           },
         },
       },

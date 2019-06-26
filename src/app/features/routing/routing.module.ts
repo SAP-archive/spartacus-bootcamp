@@ -1,31 +1,26 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { UrlModule } from '@spartacus/core';
-import { CmsPageGuard, OutletRefModule } from '@spartacus/storefront';
+import { OutletRefModule } from '@spartacus/storefront';
+import { staticRoutes } from './custom-static-routes';
 import { CustomProductRoutesModule } from './product-routes.module';
-import { AppStaticPageComponent as AppStaticSalePageComponent } from './static-page.component';
+import { AppStaticPageComponent } from './static-page.component';
 
-const routes: Routes = [
-  // standard angular route
-  {
-    path: 'sale',
-    component: AppStaticSalePageComponent,
-  },
-  // standard angular route connected to CMS data
-  {
-    path: 'my/static/page',
-    component: AppStaticSalePageComponent,
-    data: { pageLabel: '/faq' },
-    canActivate: [CmsPageGuard],
-  },
-];
-
+/**
+ * This feature demonstrates the routing in Spartacus.
+ *
+ * In this code you'll find a demonstration of:
+ * - CMS based routes, rendered with custom page component
+ * - Custom (static) route, connected to CMS data
+ * - The usage of the `routerLink` with the Spartacus `cxUrl` pipe
+ * - Configuration of product routes (SEO, aliases) with additional (normalized) product data
+ */
 @NgModule({
   imports: [
     // standard non-spartacus routes
-    RouterModule.forChild(routes),
+    RouterModule.forChild(staticRoutes),
 
-    // semantic URLs are controlled
+    // semantic URLs are controlled by Spartacus
     UrlModule,
 
     // demonstrate custom product route configurations
@@ -34,7 +29,7 @@ const routes: Routes = [
     // use outlets to add a link to the header
     OutletRefModule,
   ],
-  declarations: [AppStaticSalePageComponent],
+  declarations: [AppStaticPageComponent],
   exports: [RouterModule],
 })
 export class BootcampRoutingModule {}

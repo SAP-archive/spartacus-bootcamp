@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { translations } from '@spartacus/assets';
 import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { BootcampOutletModule } from './features/outlet/outlet.module';
 import { BootcampRoutingModule } from './features/routing/routing.module';
 import { BootcampSeoModule } from './features/seo/seo.module';
 import { BootcampStateModule } from './features/state/state.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,8 +22,7 @@ import { BootcampStateModule } from './features/state/state.module';
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
-          baseUrl:
-            'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
+          baseUrl: 'https://dev-com-17.accdemo.b2c.ydev.hybris.com:9002',
         },
       },
       site: {
@@ -48,11 +49,11 @@ import { BootcampStateModule } from './features/state/state.module';
     BootcampOutletModule,
 
     // demonstrate i18n
-    // ConfigModule.withConfig({
-    //   i18n: {
-    //     resources: translations,
-    //   },
-    // }),
+    ConfigModule.withConfig({
+      i18n: {
+        resources: translations,
+      },
+    }),
     BootcampI18nModule,
 
     // demonstrates layout configuration
