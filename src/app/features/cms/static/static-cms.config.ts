@@ -20,7 +20,7 @@ export const staticComponents: {
 
 export const staticPages: CmsPageConfig[] = [
   {
-    ignoreBackend: false,
+    ignoreBackend: true,
     pageId: '/faq',
     template: 'ContentPage1Template',
     slots: {
