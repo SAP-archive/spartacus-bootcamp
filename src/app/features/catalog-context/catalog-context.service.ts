@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SiteContext } from '@spartacus/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class CatalogContextService implements SiteContext<string> {
   }
 
   getAll(): Observable<string[]> {
-    return undefined;
+    return of(['first', 'second']);
   }
 
   setActive(catalog: string): any {
