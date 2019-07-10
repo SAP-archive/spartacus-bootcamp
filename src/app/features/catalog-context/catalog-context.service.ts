@@ -18,6 +18,7 @@ export class CatalogContextService implements SiteContext<string> {
   }
 
   setActive(catalog: string): any {
+    console.log('Catalog context:', catalog);
     this.activeCatalog.next(catalog);
   }
 }
