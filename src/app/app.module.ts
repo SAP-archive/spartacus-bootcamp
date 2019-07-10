@@ -13,6 +13,7 @@ import { BootcampOutletModule } from './features/outlet/outlet.module';
 import { BootcampRoutingModule } from './features/routing/routing.module';
 import { BootcampSeoModule } from './features/seo/seo.module';
 import { BootcampStateModule } from './features/state/state.module';
+import { CatalogContextModule } from './features/catalog-context/catalog-context.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -47,7 +48,7 @@ import { BootcampStateModule } from './features/state/state.module';
 
     // Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html
     BootcampOutletModule,
-
+    CatalogContextModule,
     // demonstrate i18n
     ConfigModule.withConfig({
       i18n: {
