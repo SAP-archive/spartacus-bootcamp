@@ -8,7 +8,7 @@ import {
 } from '@spartacus/core';
 import { filter } from 'rxjs/operators';
 
-const messageType = GlobalMessageType.MSG_TYPE_ERROR;
+const messageType = GlobalMessageType.MSG_TYPE_INFO;
 
 export function i18nMessageFactory(
   messageService: GlobalMessageService,

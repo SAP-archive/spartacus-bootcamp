@@ -1,6 +1,4 @@
-import { ServerConfig } from '@spartacus/core';
-
-export abstract class ThemeConfig extends ServerConfig {
+export abstract class ThemeConfig {
   theme?: Theme;
 }
 

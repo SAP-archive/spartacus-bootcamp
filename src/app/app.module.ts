@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { translations } from '@spartacus/assets';
+import { translationChunksConfig, translations } from '@spartacus/assets';
 import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
@@ -8,7 +8,6 @@ import { BootcampStaticCmsModule } from './features/cms/static/static-cms.module
 import { BootcampComponentModule } from './features/components/component.module';
 import { BootcampConfigModule } from './features/config/config.module';
 import { Theme, ThemeConfig } from './features/config/theme.config';
-import { BootcampI18nModule } from './features/i18n/i18n.module';
 import { BootcampMultiSiteModule } from './features/multi-site/multi-site.module';
 import { BootcampOutletModule } from './features/outlet/outlet.module';
 import { BootcampRoutingModule } from './features/routing/routing.module';
@@ -22,11 +21,12 @@ import { BootcampStateModule } from './features/state/state.module';
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
-          baseUrl: 'https://dev-com-17.accdemo.b2c.ydev.hybris.com:9002',
+          baseUrl:
+            'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
         },
       },
-      site: {
-        baseSite: 'electronics-spa',
+      context: {
+        baseSite: ['electronics-spa'],
       },
       pwa: {
         enabled: false,
@@ -52,9 +52,11 @@ import { BootcampStateModule } from './features/state/state.module';
     ConfigModule.withConfig({
       i18n: {
         resources: translations,
+        chunks: translationChunksConfig,
+        fallbackLang: 'en',
       },
     }),
-    BootcampI18nModule,
+    // BootcampI18nModule,
 
     // demonstrates layout configuration
     // BootcampLayoutConfigModule,
