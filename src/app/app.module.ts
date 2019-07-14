@@ -4,6 +4,7 @@ import { translationChunksConfig, translations } from '@spartacus/assets';
 import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
+import { CatalogContextModule } from './features/catalog-context/catalog-context.module';
 import { BootcampStaticCmsModule } from './features/cms/static/static-cms.module';
 import { BootcampComponentModule } from './features/components/component.module';
 import { BootcampConfigModule } from './features/config/config.module';
@@ -13,7 +14,6 @@ import { BootcampOutletModule } from './features/outlet/outlet.module';
 import { BootcampRoutingModule } from './features/routing/routing.module';
 import { BootcampSeoModule } from './features/seo/seo.module';
 import { BootcampStateModule } from './features/state/state.module';
-import { CatalogContextModule } from './features/catalog-context/catalog-context.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +34,12 @@ import { CatalogContextModule } from './features/catalog-context/catalog-context
       },
     }),
     BootcampRoutingModule,
+
+    // Module to configure the site context with multi-site features
     BootcampMultiSiteModule,
+    // Demonstrate a custom context
+    CatalogContextModule,
+
     BootcampSeoModule,
     BootcampStateModule,
     // BootcampDataBindingModule,
@@ -48,7 +53,7 @@ import { CatalogContextModule } from './features/catalog-context/catalog-context
 
     // Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html
     BootcampOutletModule,
-    CatalogContextModule,
+
     // demonstrate i18n
     ConfigModule.withConfig({
       i18n: {
