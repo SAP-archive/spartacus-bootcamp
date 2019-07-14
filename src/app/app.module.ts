@@ -4,6 +4,7 @@ import { translationChunksConfig, translations } from '@spartacus/assets';
 import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { AppComponent } from './app.component';
+import { CatalogContextModule } from './features/catalog-context/catalog-context.module';
 import { BootcampStaticCmsModule } from './features/cms/static/static-cms.module';
 import { BootcampComponentModule } from './features/components/component.module';
 import { BootcampConfigModule } from './features/config/config.module';
@@ -33,7 +34,12 @@ import { BootcampStateModule } from './features/state/state.module';
       },
     }),
     BootcampRoutingModule,
+
+    // Module to configure the site context with multi-site features
     BootcampMultiSiteModule,
+    // Demonstrate a custom context
+    CatalogContextModule,
+
     BootcampSeoModule,
     BootcampStateModule,
     // BootcampDataBindingModule,
