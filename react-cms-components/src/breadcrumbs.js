@@ -12,4 +12,4 @@ class BreadcrumbWebComponent extends HTMLElement {
   }
 }
 
-customElements.define('breadcrumbs-cmp', BreadcrumbWebComponent);
+customElements.define('breadcrumb-cmp', BreadcrumbWebComponent);
