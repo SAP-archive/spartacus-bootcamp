@@ -8,7 +8,7 @@ class BreadcrumbWebComponent extends HTMLElement {
     this.attachShadow({ mode: 'open' }).appendChild(mountPoint);
     // get spartacus API from web component
     const cxApi = this.cxApi || {};
-    ReactDOM.render(<Breadcrumbs {...cxApi}></Breadcrumbs>, mountPoint);
+    ReactDOM.render(<Breadcrumbs {...cxApi} />, mountPoint);
   }
 }
 

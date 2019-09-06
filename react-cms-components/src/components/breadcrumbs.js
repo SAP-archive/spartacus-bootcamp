@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
+const divStyle = {
+  color: 'var(--cx-color-primary)',
+};
+
 export function Breadcrumbs({ routing }) {
   const [url, setUrl] = useState('');
 
@@ -12,5 +16,5 @@ export function Breadcrumbs({ routing }) {
     };
   }, []);
 
-  return <span>{url}</span>;
+  return <span style={divStyle}>{url}</span>;
 }

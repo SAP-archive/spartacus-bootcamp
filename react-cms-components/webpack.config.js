@@ -32,7 +32,7 @@ module.exports = {
 
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist/react-cms-components'),
+    path: path.resolve(__dirname, '../src/assets/web-components'),
   },
   optimization: {
     minimizer: [
