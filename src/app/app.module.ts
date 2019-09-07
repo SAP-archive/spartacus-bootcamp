@@ -57,6 +57,8 @@ import { AppComponent } from './app.component';
     // // Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html
     // BootcampOutletModule,
 
+    // BootcampIconModule,
+
     // BootcampI18nModule,
 
     // demonstrates layout configuration
