@@ -30,7 +30,7 @@ export class WishListService {
         this.store.dispatch(new LoadWishLists());
       }
     }),
-    filter(Boolean)
+    filter(list => !!list)
   );
 
   /**

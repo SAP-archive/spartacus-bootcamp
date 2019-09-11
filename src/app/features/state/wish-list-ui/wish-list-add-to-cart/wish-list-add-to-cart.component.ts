@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Product } from '@spartacus/core';
 import { CurrentProductService } from '@spartacus/storefront';
 import { combineLatest, Observable } from 'rxjs';
 import { filter, map, take } from 'rxjs/operators';
@@ -22,16 +23,16 @@ export class WishListAddToCartComponent {
     string
   > = this.currentProductService.getProduct().pipe(
     filter(Boolean),
-    map(product => product.code)
+    map((product: Product) => product.code)
   );
 
   /**
    * Observable with information if current product is in wish list
    */
-  isInWishList$: Observable<boolean> = combineLatest(
+  isInWishList$: Observable<boolean> = combineLatest([
     this.productCode$,
-    this.wishListService.list$
-  ).pipe(
+    this.wishListService.list$,
+  ]).pipe(
     map(([productCode, wishList]) => wishList.indexOf(productCode) !== -1)
   );
 
