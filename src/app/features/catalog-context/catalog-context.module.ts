@@ -3,6 +3,7 @@ import {
   ConfigModule,
   ContextServiceMap,
   serviceMapFactory,
+  SiteContextConfig,
 } from '@spartacus/core';
 import { CatalogContextService } from './catalog-context.service';
 
@@ -26,7 +27,7 @@ function customServiceMapFactory() {
         urlParameters: ['baseSite', 'catalog', 'language', 'currency'],
         catalog: ['catalog-A', 'catalog-B'],
       },
-    }),
+    } as SiteContextConfig),
   ],
   providers: [
     {
