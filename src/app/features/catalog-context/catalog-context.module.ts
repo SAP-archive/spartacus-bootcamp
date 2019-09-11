@@ -23,8 +23,8 @@ function customServiceMapFactory() {
   imports: [
     ConfigModule.withConfig({
       context: {
-        urlParameters: ['baseSite', 'language', 'currency', 'catalog'],
-        catalog: ['first', 'second'],
+        urlParameters: ['baseSite', 'catalog', 'language', 'currency'],
+        catalog: ['catalog-A', 'catalog-B'],
       },
     }),
   ],
