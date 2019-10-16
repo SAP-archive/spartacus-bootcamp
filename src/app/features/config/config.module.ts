@@ -21,6 +21,7 @@ export function demoThemeConfigFactory(config: ThemeConfig) {
 @NgModule({
   imports: [ConfigModule.withConfig(defaultThemeConfig)],
   providers: [
+    { provide: ThemeConfig, useExisting: Config },
     // Implement a factory to demonstrate the configured theme
     {
       provide: APP_INITIALIZER,
