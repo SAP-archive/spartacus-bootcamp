@@ -4,6 +4,7 @@ import {
   OccConfig,
   PRODUCT_NORMALIZER,
   RouteConfig,
+  RoutingConfig,
 } from '@spartacus/core';
 import {
   ProductCategoryNormalizer,
