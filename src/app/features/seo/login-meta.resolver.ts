@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ContentPageMetaResolver, Page } from '@spartacus/core';
+import { ContentPageMetaResolver } from '@spartacus/core';
 import { Observable, of } from 'rxjs';
 
 /**
@@ -13,7 +13,7 @@ import { Observable, of } from 'rxjs';
 export class LoginPageMetaResolver extends ContentPageMetaResolver {
   pageTemplate = 'LoginPageTemplate';
 
-  resolveTitle(page: Page): Observable<string> {
+  resolveTitle(): Observable<string> {
     return of('Custom Login Page title');
   }
 }

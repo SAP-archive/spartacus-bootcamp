@@ -1022,31 +1022,31 @@
     semver "6.3.0"
     semver-intersect "1.4.0"
 
-"@spartacus/assets@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@spartacus/assets/-/assets-1.1.0.tgz#0b088c9591a782c57e9f19c30ae1c5c0aeaa574e"
-  integrity sha512-c0z1eUrl8QIXLj+gxcMGj/sLCSWAmgeAWEt+0zO+0GfcaI8fwQQ3hqGKLBr+1KnbAtzgQ+S0nkGiopdtDf3FFg==
+"@spartacus/assets@^1.1.0":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@spartacus/assets/-/assets-1.3.1.tgz#ddb5dcf902dbfda13897b102909629f86b88eef2"
+  integrity sha512-WNl+JQAnzhah8RgZ9CByi90bs4bHRiis9Q9PZbVRLEdizlvZSIx1jBMqVsvffoJDDdd+9zEBAJCoabgxJZp3Nw==
   dependencies:
     tslib "^1.9.0"
 
-"@spartacus/core@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@spartacus/core/-/core-1.1.0.tgz#bb96d7a04cc996e444caaae1ffd47d49287c1931"
-  integrity sha512-jPe8vqWTnjDY/eE0TDaWTFaxr8eYc71iKhySS14l7wMoVgk9rfg8NSWbAMVnzii/ima6JAOsQA/o0r5EJ5cVSw==
+"@spartacus/core@^1.0.0":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@spartacus/core/-/core-1.3.1.tgz#c737ea6b48a5d3b6b552a2744c5c9ee241f09acb"
+  integrity sha512-MvGJwF00lOSkhsRqBK3jzPAApO0SBmde/odnTM2BSCCV8y1EyzhD9yITtq+PH7x1DwdkQcFW6tqHwZCwPOAyag==
   dependencies:
     tslib "^1.9.0"
 
-"@spartacus/storefront@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@spartacus/storefront/-/storefront-1.1.0.tgz#f1361341a3bde0f913b11e44e7d475b960eeb5b1"
-  integrity sha512-eRvFlrYsQyK+/Vm8ZUatS1Gso4XDQUWS+mlHyw/ddDQEBYy/ZBIOTfZKbHns2nrEWdjMsaSEoaaMuXcCttC91w==
+"@spartacus/storefront@^1.0.0":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@spartacus/storefront/-/storefront-1.3.1.tgz#2f0162e70d35fa552f893fd4bcf57b4549c3e824"
+  integrity sha512-7zlGq1T814FMsqJRGZ6rODts63C6NdhJLhfVFwK4R9YBc3gYFG7qms4LlCiEM2D2L33V6VaWifLQdRSw/e6LNQ==
   dependencies:
     tslib "^1.9.0"
 
-"@spartacus/styles@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@spartacus/styles/-/styles-1.1.0.tgz#882082c1ea87af93a35f982dc976b926f6e294c3"
-  integrity sha512-aRoTz1CiyFttftdX3nAt5gJed6//UseevXqFMNSn9TciJGh8OtgpkvpIH0igz8o9pYCONuOF/BU/5l8at+hp5g==
+"@spartacus/styles@^1.0.0":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@spartacus/styles/-/styles-1.3.1.tgz#680050c8f9d95032507e5dec664e8f24edb44472"
+  integrity sha512-jb2/OvL87evJaLMVaeMfyMtMgLwv7jMFhO1LR5Qaqx8VuVrov+TL/3s2Y85uAn4Xa3LcwViA0jrCtscWE4L1Kw==
   dependencies:
     hamburgers "^1.1.3"
 
@@ -5325,6 +5325,13 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
+ngx-infinite-scroll@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-infinite-scroll/-/ngx-infinite-scroll-8.0.1.tgz#95b9d7e51f8ed5ee6821889b4e4e3cfe8ddb5838"
+  integrity sha512-YpgkTPDNT7UCEp0GRX178V1nF+M2slCPJ2TX3CpvPZb5AR99JYwj/fNivcue5lN51oUaTySEG27qjVU73vKhjw==
+  dependencies:
+    opencollective-postinstall "^2.0.2"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -5615,6 +5622,11 @@ open@6.4.0:
   integrity sha512-IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==
   dependencies:
     is-wsl "^1.1.0"
+
+opencollective-postinstall@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
+  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
 
 opn@^5.5.0:
   version "5.5.0"
