@@ -51,12 +51,12 @@ import {
     // normalize the product data to get the first product category in the Product model
     {
       provide: PRODUCT_NORMALIZER,
-      useClass: ProductPrettyNameNormalizer,
+      useExisting: ProductPrettyNameNormalizer,
       multi: true,
     },
     {
       provide: PRODUCT_NORMALIZER,
-      useClass: ProductCategoryNormalizer,
+      useExisting: ProductCategoryNormalizer,
       multi: true,
     },
   ],
