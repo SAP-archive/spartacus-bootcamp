@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { UrlModule } from '@spartacus/core';
-import { OutletRefModule } from '@spartacus/storefront';
 import { staticRoutes } from './custom-static-routes';
 import { CustomProductRoutesModule } from './product-routes.module';
 import { AppStaticPageComponent } from './static-page.component';
@@ -17,17 +16,14 @@ import { AppStaticPageComponent } from './static-page.component';
  */
 @NgModule({
   imports: [
+    // dependend module for semantic URLs
+    UrlModule,
+
     // standard non-spartacus routes
     RouterModule.forChild(staticRoutes),
 
-    // semantic URLs are controlled by Spartacus
-    UrlModule,
-
     // demonstrate custom product route configurations
     CustomProductRoutesModule,
-
-    // use outlets to add a link to the header
-    OutletRefModule,
   ],
   declarations: [AppStaticPageComponent],
   exports: [RouterModule],
