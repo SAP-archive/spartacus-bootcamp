@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { translationChunksConfig, translations } from '@spartacus/assets';
 import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
+import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,8 +13,7 @@ import { AppComponent } from './app.component';
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
-          baseUrl:
-            'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
+          baseUrl: environment.occBaseUrl,
         },
       },
       context: {

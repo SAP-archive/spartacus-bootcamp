@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  occBaseUrl:
+    'https://storefront.c39j2-walkersde1-d4-public.model-t.cc.commerce.ondemand.com',
 };
 
 /*
