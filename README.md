@@ -1,6 +1,6 @@
 # Description
 
-This is a sample code repository for Spartacus implementation and extensibility. It showcases a set of code examples and concrete use cases on how to implement, extend and enhance Spartacus for CX customers, partners and implementors.
+This is a sample code repository for Spartacus implementation and extensibility. It showcases a set of code examples and concrete use cases on how to implement, extend and enhance Spartacus for CX customers, partners, and implementers.
 
 # Requirements
 
@@ -60,5 +60,4 @@ Team Spartacus welcomes feedback, ideas, requests, and especially code contribut
 
 # License
 
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the SAP Sample Code License except as noted otherwise in the [LICENSE file](LICENSE)”
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP Sample Code License except as noted otherwise in the [LICENSE file](LICENSE).
