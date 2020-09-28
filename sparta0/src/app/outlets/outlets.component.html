@@ -1,0 +1,16 @@
+<ng-template cxOutletRef="Section1" cxOutletPos="before">
+  <h1>Hot sale</h1>
+  <cx-product-list-item
+    *ngIf="hotProduct$ | async as product"
+    [product]="product"
+  ></cx-product-list-item>
+</ng-template>
+
+<ng-template cxOutletRef="PDP.PRICE" cxOutletPos="before">
+  <h3
+    class="text-danger"
+    *ngIf="(currentProduct$ | async)?.stock.stockLevel < 300"
+  >
+    Limited offer!
+  </h3>
+</ng-template>

@@ -1,0 +1,23 @@
+input {
+  border: solid;
+  text-align: right;
+  border-color: var(--cx-color-light);
+  padding: 12px 16px 12px 0px;
+  max-height: 46px;
+  min-width: 48px;
+  max-width: 78px;
+}
+
+.cart-details-wrapper {
+  position: relative;
+}
+
+.loading {
+  opacity: 0.5;
+}
+
+cx-spinner {
+  position: absolute;
+  top: 25%;
+  left: 43%;
+}
