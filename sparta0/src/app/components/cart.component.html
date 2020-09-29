@@ -1,0 +1,59 @@
+<ng-container *ngIf="cart$ | async as cart">
+  <ng-container *ngIf="entries$ | async as entries">
+    <div *ngIf="cart.totalItems > 0" class="cart-details-wrapper">
+      <cx-spinner *ngIf="!(cartLoaded$ | async)"></cx-spinner>
+      <table
+        class="table table-striped"
+        [class.loading]="!(cartLoaded$ | async)"
+      >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Code</th>
+            <th scope="col">Name</th>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entry of entries; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>
+              <a
+                [routerLink]="
+                  { cxRoute: 'product', params: entry.product } | cxUrl
+                "
+              >
+                <cx-media
+                  [container]="entry.product.images?.PRIMARY"
+                  format="thumbnail"
+                ></cx-media>
+              </a>
+            </td>
+            <td>{{ entry.product.code }}</td>
+            <td>{{ entry.product.name }}</td>
+            <td>{{ entry.product.manufacturer }}</td>
+            <td>{{ entry.basePrice?.formattedValue }}</td>
+            <td>
+              <input
+                type="number"
+                [value]="entry.quantity"
+                (change)="onChange(entry.entryNumber, $event)"
+              />
+            </td>
+            <td>{{ entry.totalPrice.formattedValue }}</td>
+          </tr>
+          <tr>
+            <td colspan="7"></td>
+            <td class="table-active">
+              <strong>{{ cart.totalPriceWithTax.formattedValue }}</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</ng-container>

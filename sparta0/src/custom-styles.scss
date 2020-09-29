@@ -1,0 +1,52 @@
+$breakpoint-tablet: 770px;
+
+// Adjust Color variables
+:root {
+  --cx-color-dark: #626262;
+  --cx-color-primary: #efac02;
+  --cx-color-secondary: #d5a26f;
+}
+
+// Remove Site Context line
+header .SiteContext:after {
+  content: unset;
+}
+
+// Adjust position of header elements
+header {
+  padding: 0px;
+
+  .SiteLogo {
+    width: 155px;
+  }
+
+  .SiteContext {
+    flex: 75%;
+  }
+
+  .NavigationBar {
+    flex: 80%;
+  }
+
+  cx-searchbox label {
+    width: unset;
+    min-width: unset;
+  }
+
+  cx-navigation-ui {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  header .SearchBox {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
+
+// Cart Table styles
+
+.table td {
+  text-align: center;
+}
