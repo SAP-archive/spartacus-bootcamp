@@ -20,8 +20,8 @@ import { ServicesModule } from './services/services.module';
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
-          baseUrl: 'https://api.c39j2-walkersde1-d3-public.model-t.cc.commerce.ondemand.com',
-          prefix: '/rest/v2/'
+          baseUrl: 'https://spartacus-training.eastus.cloudapp.azure.com:8443',
+          prefix: '/occ/v2/'
         }
       },
       context: {
