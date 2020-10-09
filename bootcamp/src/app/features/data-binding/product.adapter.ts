@@ -23,7 +23,7 @@ export class BestbuyProductAdapter implements ProductAdapter {
     return this.http
       .get(
         // tslint:disable-next-line: max-line-length
-        `https://api.bestbuy.com/v1/products/6202761.json?show=sku,name,customerReviewAverage,customerReviewCount,regularPrice,salePrice,image,thumbnailImage,details,features.feature,onlineAvailability,description,longDescriptionHtml,categoryPath&apiKey=GIJ1DzoNuPuAoKjFJmqfJuDa`
+        'INSERT API KEY HERE'
       ) //tslint:disable-line
       .pipe(this.converter.pipeable(PRODUCT_NORMALIZER));
   }
