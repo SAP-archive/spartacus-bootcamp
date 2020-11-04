@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+$skipComponentStyles: (cx-mini-cart);
+
+@import '~@spartacus/styles/index';
+
+:root {
+  --cx-color-dark: #111111;
+  --cx-color-primary: #d59f2d;
+  --cx-color-secondary: gray;
+}
+
+cx-mini-cart {
+  margin-right: unset;
+  padding: 10px;
+  position: relative;
+  .count {
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    right: 0;
+    top: 0;
+  }
+  .total {
+    display: none;
+  }
+}

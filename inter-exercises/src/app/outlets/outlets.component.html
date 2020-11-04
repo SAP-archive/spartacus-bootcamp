@@ -1,0 +1,8 @@
+<ng-template cxOutletRef="PDP.PRICE" cxOutletPos="before">
+  <h3
+    class="text-danger"
+    *ngIf="(currentProduct$ | async)?.stock.stockLevel < 300"
+  >
+    Limited offer!
+  </h3>
+</ng-template>
