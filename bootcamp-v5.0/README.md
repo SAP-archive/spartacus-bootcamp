@@ -1,4 +1,4 @@
-# Spa5store
+# Composable store 5.0 (spa-v5.0)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
 
