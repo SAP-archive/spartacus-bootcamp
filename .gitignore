@@ -11,6 +11,10 @@
 /node_modules
 **/node_modules
 
+Bootcamp-v5.0/.angular/cache
+Bootcamp-v5.0/.vscode/
+Bootcamp-v5.0/.npmrc
+
 # profiling files
 chrome-profiler-events.json
 speed-measure-plugin.json

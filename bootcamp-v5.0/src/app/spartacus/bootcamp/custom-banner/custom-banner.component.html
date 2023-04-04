@@ -1,0 +1,8 @@
+<ng-container class="custom-banner"  *ngIf="data$ | async as data"> 
+    <div>
+        <p>custom-banner works!</p>
+        <!-- <cx-media [container]="data.media" [title]="data | json"></cx-media> -->
+        <cx-media [container]="$any(data.media)" [title]="data | json"></cx-media>
+    </div>
+</ng-container>
+      

@@ -1,0 +1,36 @@
+/* customize global theme */
+
+/* Opt-out of certain component styles */
+$skipComponentStyles: (cx-mini-cart);
+
+%custom-mini-cart {
+  a {
+    border: solid 1px white;
+    border-radius: 15px;
+    position: relative;
+    display: block;
+
+    .count {
+      border: solid 2px var(--cx-color-dark);
+      background: var(--cx-color-primary);
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: -10px;
+      right: -10px;
+    }
+    .total {
+      display: block;
+    }
+  }
+}
+
+cx-mini-cart {
+  // placeholder selectors are btw still available to you...
+  // @extend %cx-mini-cart;
+  @extend %custom-mini-cart !optional;
+}
