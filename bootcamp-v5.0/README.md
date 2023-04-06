@@ -1,9 +1,8 @@
-# Spa5store
+# Composable store 5.0 (spa-v5.0)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
 
-To install composable storefront 5.0, you need to download the composable storefront 5.0 libraries from the Repository Based Shipment Channel (RBSC), as described in the following procedure :
-https://help.sap.com/docs/SAP_COMMERCE_COMPOSABLE_STOREFRONT/cfcf687ce2544bba9799aa6c8314ecd0/5de67850bd8d487181fef9c9ba59a31d.html?version=5#downloading-composable%0Astorefront-libraries-from-the-repository-based-shipment-channel .
+To install composable storefront 5.0, you need to download the composable storefront 5.0 libraries from the Repository Based Shipment Channel (RBSC), as described in the [following procedure](https://help.sap.com/docs/SAP_COMMERCE_COMPOSABLE_STOREFRONT/cfcf687ce2544bba9799aa6c8314ecd0/5de67850bd8d487181fef9c9ba59a31d.html?version=5#downloading-composable%0Astorefront-libraries-from-the-repository-based-shipment-channel).
 
 ## Development server
 
