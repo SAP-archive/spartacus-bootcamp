@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BaseStorefrontModule, MediaModule } from "@spartacus/storefront";
 import { CustomBannerComponent } from './bootcamp/custom-banner/custom-banner.component';
 import { BootcampDataBindingModule } from './bootcamp/data-binding/data-binding.module';
+import { BootcampRoutingModule } from './bootcamp/routing/routing.module';
 import { BootcampSeoModule } from './bootcamp/seo/seo.module';
 import { SpartacusConfigurationModule } from './spartacus-configuration.module';
 import { SpartacusFeaturesModule } from './spartacus-features.module';
@@ -24,6 +25,8 @@ import { SpartacusFeaturesModule } from './spartacus-features.module';
     // Custom Data-binding for product
     //BootcampDataBindingModule,
     
+    // Routing
+    BootcampRoutingModule,
 
   ],
   exports: [BaseStorefrontModule]
