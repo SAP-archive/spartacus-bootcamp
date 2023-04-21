@@ -1,0 +1,37 @@
+.add-to-cart {
+    position: relative;
+    .summary {
+      position: absolute;
+      right: -35px;
+      top: 145px;
+    }
+    cx-icon:before {
+      font-size: 30px;
+    }
+    .count {
+      border: solid 2px red;
+      background: white;
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+  
+      justify-content: center;
+      align-items: center;
+      color: red;
+      margin-top: -45px;
+      z-index: 10;
+      position: relative;
+      left: 25px;
+    }
+  }
+  
+  .ProductDetailsPageTemplate {
+    padding: 0;
+  }
+  .before-pdp {
+    background: var(--cx-color-primary);
+    padding: 20px;
+    color: white;
+  }
+  
