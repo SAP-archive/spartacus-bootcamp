@@ -1,0 +1,26 @@
+:root {
+    --max-width: 500px;
+  }
+  //
+  header {
+    max-width: var(--max-width);
+    margin: auto;
+  }
+  // all page-layout (incl footer!
+  cx-page-layout {
+    max-width: var(--max-width);
+    margin: auto;
+  }
+//   all page slots
+//   cx-page-slot {
+//   }
+  
+//  template specific
+//   .LandingPage2Template {
+//     cx-page-slot {
+//       &.Section1 {
+        
+//       }
+//     }
+//   }
+  
