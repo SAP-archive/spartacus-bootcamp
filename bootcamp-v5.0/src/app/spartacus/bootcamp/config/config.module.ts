@@ -6,7 +6,7 @@ import { ThemeConfig } from './theme.config';
 export function demoThemeConfigFactory(config: ThemeConfig) {
   return (): Promise<any> => {
     console.log(`Custom theme configured: ${config.theme}`);
-    return null;
+    return Promise.resolve();
   };
 }
 
@@ -19,7 +19,9 @@ export function demoThemeConfigFactory(config: ThemeConfig) {
  * at application level.
  */
 @NgModule({
-  imports: [ConfigModule.withConfig(defaultThemeConfig)],
+  imports: [
+  ConfigModule.withConfig(defaultThemeConfig),
+  ],
   providers: [
     { provide: ThemeConfig, useExisting: Config },
     // Implement a factory to demonstrate the configured theme

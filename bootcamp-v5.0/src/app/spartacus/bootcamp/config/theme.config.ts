@@ -1,4 +1,6 @@
-export abstract class ThemeConfig {
+import { Config } from "@spartacus/core";
+
+export abstract class ThemeConfig extends Config{
   theme?: Theme;
 }
 

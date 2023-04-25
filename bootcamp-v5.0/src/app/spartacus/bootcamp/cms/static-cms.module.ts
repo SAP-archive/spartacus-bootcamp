@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { CmsStructureConfig, ConfigModule } from '@spartacus/core';
+import { layoutConfig } from './layout.config';
+import { staticCmsonfig } from './static-cms.config';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
-  ]
+    ConfigModule.withConfig(staticCmsonfig as CmsStructureConfig),
+    ConfigModule.withConfig(layoutConfig),
+  ],
 })
-export class CmsModule { }
+export class BootcampStaticCmsModule {}
