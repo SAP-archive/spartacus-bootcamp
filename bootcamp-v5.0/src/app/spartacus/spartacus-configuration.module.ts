@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from "@spartacus/assets";
 import { CmsConfig, FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
 import { defaultCmsContentProviders, layoutConfig, MediaComponent, mediaConfig, MediaModule, StorefrontComponentModule } from "@spartacus/storefront";
-import { CustomBannerComponent } from './bootcamp/custom-banner/custom-banner.component';
+import { CustomBannerComponent } from './bootcamp/component/custom-banner/custom-banner.component';
 
   @NgModule({
   declarations: [],
@@ -22,8 +22,8 @@ import { CustomBannerComponent } from './bootcamp/custom-banner/custom-banner.co
         // baseUrl: 'https://localhost:9002',
         baseUrl: 'https://spartacus-devci767.eastus.cloudapp.azure.com:8443',
         // baseUrl:'https://spartacus-dev7.eastus.cloudapp.azure.com:9002/',
-        prefix: '/occ/v2/' 
-      }
+        prefix: '/occ/v2/' ,
+      },
     },
   }), provideConfig(<SiteContextConfig>{
     context: {
