@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 $styleVersion: 5.0;
+// load custom style in bootcam/styling
 @import './app/spartacus/bootcamp/styling/custom-styles.scss';
 @import '@spartacus/styles/index';

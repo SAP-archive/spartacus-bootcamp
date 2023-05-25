@@ -4,6 +4,7 @@ import { BaseStorefrontModule, MediaModule } from '@spartacus/storefront';
 import { SpartacusConfigurationModule } from '../../spartacus-configuration.module';
 import { SpartacusFeaturesModule } from '../../spartacus-features.module';
 import { CustomBannerComponent } from './custom-banner/custom-banner.component';
+import { provideConfig, CmsConfig } from '@spartacus/core';
 
 
 
@@ -17,9 +18,19 @@ import { CustomBannerComponent } from './custom-banner/custom-banner.component';
     SpartacusFeaturesModule,
     SpartacusConfigurationModule,
     BaseStorefrontModule, 
-    CommonModule,
     /* tu use <cx-media> in the custom banner html */
     MediaModule,
-  ]
+  ],
+  providers:[
+  // provide our CustomBannerComponent as a SimpleResponsiveBannerComponent
+  provideConfig(<CmsConfig>{
+    cmsComponents: {
+      SimpleResponsiveBannerComponent: {
+          component : CustomBannerComponent,
+        },
+      },
+    }),
+  ],
+  entryComponents: [CustomBannerComponent],
 })
 export class BootcampComponentModule { }

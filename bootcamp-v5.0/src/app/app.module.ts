@@ -10,7 +10,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
 @NgModule({
   declarations: [
     AppComponent,
-    
+  
   ],
   imports: [
     BrowserModule,

@@ -2,8 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from "@spartacus/assets";
 import { CmsConfig, FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
+import { StorefrontComponent } from '@spartacus/storefront';
 import { defaultCmsContentProviders, layoutConfig, MediaComponent, mediaConfig, MediaModule, StorefrontComponentModule } from "@spartacus/storefront";
+import { BootcampComponentModule } from './bootcamp/component/component.module';
 import { CustomBannerComponent } from './bootcamp/component/custom-banner/custom-banner.component';
+import { SpartacusModule } from './spartacus.module';
 
   @NgModule({
   declarations: [],
@@ -25,31 +28,27 @@ import { CustomBannerComponent } from './bootcamp/component/custom-banner/custom
         prefix: '/occ/v2/' ,
       },
     },
-  }), provideConfig(<SiteContextConfig>{
+  }), 
+  provideConfig(<SiteContextConfig>{
     context: {
       urlParameters: ['baseSite', 'language', 'currency'],
       baseSite: ['electronics-spa','apparel-uk-spa'],
       currency: ['USD', 'GBP',]
       },
-  }), provideConfig(<I18nConfig>{
+  }), 
+  provideConfig(<I18nConfig>{
     i18n: {
       resources: translations,
       chunks: translationChunksConfig,
       fallbackLang: 'en'
     },
-  }), provideConfig(<FeaturesConfig>{
+  }), 
+  provideConfig(<FeaturesConfig>{
     features: {
       level: '5.0'
     }
   }),
-  provideConfig(<CmsConfig>{
-    cmsComponents: {
-      SimpleResponsiveBannerComponent: {
-          component : CustomBannerComponent,
-        },
-      },
-    }),
   ], 
-  entryComponents: [CustomBannerComponent],
+  
 })
 export class SpartacusConfigurationModule { }

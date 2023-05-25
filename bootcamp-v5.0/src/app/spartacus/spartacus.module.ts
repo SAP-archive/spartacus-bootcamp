@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ConfigModule } from '@spartacus/core';
 import { BaseStorefrontModule } from "@spartacus/storefront";
@@ -14,15 +15,30 @@ import { BootcampMultiSiteModule } from './bootcamp/multi-site/multi-site.module
 import { BootcampOutletModule } from './bootcamp/outlet/outlet.module';
 import { BootcampRoutingModule } from './bootcamp/routing/routing.module';
 import { BootcampSeoModule } from './bootcamp/seo/seo.module';
+import { SpartacusConfigurationModule } from './spartacus-configuration.module';
+import { SpartacusFeaturesModule } from './spartacus-features.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [  
+    SpartacusConfigurationModule,
+    SpartacusFeaturesModule,
+    /* Demonstrate the addition of a custom component, example : Custom Banner */
+    BootcampComponentModule,
+
+    BootcampConfigModule,
+    /* Provide a custom theme to the `ThemeConfig` */
+    ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
+    
+    /* Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html */
+    BootcampOutletModule,
+    
     /* SEO for custom login page and pageMeta */
     BootcampSeoModule,
     
-    /* Custom Data-binding for product */
-    BootcampDataBindingModule,
+    /* Custom Data-binding for product BUT NEED API KEY !!! */
+    // BootcampDataBindingModule,
     
     /* Routing */
     BootcampRoutingModule,
@@ -36,24 +52,14 @@ import { BootcampSeoModule } from './bootcamp/seo/seo.module';
     /* Demonstrate static CMS config */
     BootcampStaticCmsModule,
 
-    BootcampConfigModule,
-    /* Provide a custom theme to the `ThemeConfig` */
-    ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
-
-    /* Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html */
-    BootcampOutletModule,
-
     /* Demonstrate icon module */
     BootcampIconModule,
-
-    /* Demonstrate Internationalization module */
-    BootcampI18nModule,
-
+    
     /* demonstrates layout configuration */
     BootcampLayoutConfigModule,
-
-    /* Demonstrate the addition of a custom component, example : Custom Banner */
-    BootcampComponentModule,
+    
+    /* Demonstrate Internationalization module */
+    // BootcampI18nModule,
 
   ],
   exports: [BaseStorefrontModule]

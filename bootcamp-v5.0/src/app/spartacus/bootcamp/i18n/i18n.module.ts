@@ -17,19 +17,21 @@ export function i18nMessageFactory(
   return (): Promise<void> => {
     return translation
       .translate('customFeature.example', {
-        param1: 1,
+        param2: 2,
+        param1: 1, 
       })
       .pipe(filter(l => !l.startsWith('[')))
       .toPromise()
       .then(l =>
-        messageService.add(`Custom label added: ${l}`, messageType)
+        messageService.add(`Custom label added: ${l}`, messageType),
+
       )
       .catch(error => {
         // handle error here
+        console.log(`ERROR !`);
       });
   };
 }
-
 
 @NgModule({
   imports: [
@@ -39,7 +41,6 @@ export function i18nMessageFactory(
         backend: {
           loadPath: 'assets/i18n-assets/{{lng}}/{{ns}}.json',
         },
-
         chunks: {
           custom: ['customFeature'],
         },

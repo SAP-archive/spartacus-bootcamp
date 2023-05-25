@@ -1,0 +1,5 @@
+{
+  "customFeature": {
+    "example": "my custom value contains dynamic parameters: {{param2}} and {{param1}}"
+  }
+}
