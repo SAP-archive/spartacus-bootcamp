@@ -1,6 +1,9 @@
-# Sample code repository for Spartacus
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
 
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/spartacus-bootcamp)](https://api.reuse.software/info/github.com/SAP/spartacus-bootcamp)
+# Important Notice
+This public repository is read-only and no longer maintained.
+
+# Sample code repository for Spartacus
 
 This is a sample code repository for Spartacus. Each folder containing a `package.json` is a sample project for Spartacus.
 
